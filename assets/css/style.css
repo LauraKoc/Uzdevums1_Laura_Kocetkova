@@ -1,0 +1,202 @@
+@font-face {
+  font-family: Gotham-Bold;
+  src: url(../fonts/Gotham-Font/Gotham-Bold.otf),
+    url(../fonts/Gotham-Font/Gotham-Bold.ttf);
+  font-weight: bold;
+}
+
+@font-face {
+  font-family: Gotham-Normal;
+  src: url(../fonts/Gotham-Font/GothamBook.ttf);
+  font-weight: 400;
+}
+
+@font-face {
+  font-family: Gotham-Italic;
+  src: url(../fonts/Gotham-Font/GothamMediumItalic.ttf);
+  font-weight: 400;
+}
+
+*,
+::after,
+::before {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+li {
+  list-style: none;
+}
+
+.header {
+  width: 100%;
+  height: 80px;
+  position: sticky;
+  text-align: center;
+}
+
+.button {
+  display: none;
+  padding: 20px;
+  z-index: 99999;
+  position: fixed;
+  bottom: 30px;
+  right: 10px;
+  border-radius: 50%;
+  padding: 30px 20px;
+  border: 1px solid #000000;
+  background-color: #ffffff;
+  text-decoration: #000000;
+  color: #000000;
+}
+
+.desktopMenu ul {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 30px;
+}
+
+.desktopMenu ul li {
+  padding: 0 30px;
+}
+
+section {
+  padding: 50px;
+  padding-top: 0px;
+  margin: 20px auto;
+}
+
+.content,
+.content-reverse {
+  display: flex;
+  align-items: center;
+}
+
+.content-reverse {
+  flex-direction: row-reverse;
+  margin-top: 20px;
+}
+
+.caption {
+  font-family: Gotham-Bold, sans-serif;
+  padding: 20px 0;
+}
+
+.description {
+  font-family: Gotham-Normal, sans-serif;
+  line-height: 1.5;
+  font-size: 15px;
+}
+
+.about_text {
+  padding: 0 50px;
+}
+
+.cards-wrap {
+  display: flex;
+}
+
+.card {
+  margin-right: 20px;
+}
+
+.card img {
+  width: 100%;
+  transition: 0.5s all ease-in-out;
+}
+
+.card:hover img {
+  transform: scale(1.05);
+}
+
+.card p {
+  font-family: Gotham-Italic, sans-serif;
+  line-height: 1.5;
+  text-align: center;
+  font-size: 10px;
+}
+
+.map {
+  display: flex;
+  justify-content: center;
+  margin-top: 20px;
+}
+
+iframe {
+  width: 100%;
+}
+
+.contact-detail {
+  font-size: 20px;
+  padding-top: 10px;
+}
+
+.footer {
+  width: 100%;
+  text-align: center;
+  margin-top: auto;
+  padding-bottom: 20px;
+}
+
+@media screen and (max-width: 992px) {
+  .mobileMenu {
+    display: block;
+  }
+
+  .burgerMenu {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    margin: 20px;
+  }
+
+  .nav-links {
+    display: none;
+  }
+
+  .active {
+    display: flex;
+    background-color: white;
+    height: 500vh;
+    justify-content: center;
+    flex-direction: column;
+    font-size: 28px;
+  }
+
+  .nav-links li {
+    padding-top: 10px;
+  }
+
+  .burgerMenu div {
+    width: 35px;
+    height: 5px;
+    margin: 2px;
+    color: black;
+    background-color: black;
+  }
+
+  .desktopMenu {
+    display: none;
+  }
+
+  .content,
+  .content-reverse,
+  .cards-wrap {
+    flex-direction: column;
+  }
+
+  .about_text {
+    padding-top: 20px;
+  }
+
+  .card {
+    padding: 20px;
+  }
+}
+@media screen and (min-width: 993px) {
+  .mobileMenu {
+    display: none;
+  }
+}
